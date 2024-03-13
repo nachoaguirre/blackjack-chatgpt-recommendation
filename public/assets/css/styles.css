@@ -1,0 +1,74 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #2f4f30;
+    color: white;
+}
+.titulo {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+}
+
+.cardimg {
+    width: 100px;
+    position: relative;
+    left: 60px;
+    margin-left: -50px;
+    z-index: 10;
+    animation: fadeInTopRight 0.5s ease-out forwards;
+}
+
+.card-placeholder {
+    width: 100px;
+    height: 147px;
+    display: inline-block;
+    border: 3px dashed gray;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#computadora-cartas, #jugador-cartas {
+    height: 160px;
+}
+
+button:disabled, .btn:disabled {
+    cursor: not-allowed;
+    pointer-events: inherit;
+}
+
+@keyframes fadeInTopRight {
+    from {
+        opacity: 0;
+        transform: translate(30px, -30px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.active-player h1 {
+    color: #99ff00;
+}
+
+.active-player .card-placeholder {
+    border-color: #99ff00;
+}
+
+.lost-player h1 {
+    color: #c61a1a;
+}
+
+.win-player h1 {
+    color: #f302cf;
+}
+
+.player-container {
+    border: 1px solid #1c3c1d;
+    border-radius: 10px;
+    padding: 5px 10px;
+    box-shadow: inset 0px 1px 5px 2px #1728174f;
+}
